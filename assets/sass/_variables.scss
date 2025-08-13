@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Lora&display=swap');
+
+/* Tipografía */
+$fuente: 'Montserrat', 'Lora';
+
+*{
+    font-family: $fuente;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---- Colores base ---- */
+$color-bg: #E9ECBA;        // fondo body
+$color-text: #333333;      // texto general
+$color-text-2: #444444;    // texto secundario
+
+/* Marca / header / botones */
+$color-primary: #73946B;       // verde principal (header / botones)
+$color-primary-600: #587c5a;   // hover botón
+$color-primary-700: #466c4a;   // hover más oscuro
+
+/* Títulos */
+$color-heading:  #1F3C27;      // h1 del header
+$color-heading-2:#264D34;      // títulos en páginas/footers
+
+/* Neutros */
+$white: #ffffff;
+$black: #000000;
+
+/* ---- Radios / sombras del sitio ---- */
+$radius-sm: 5px;     // botones
+$radius-md: 8px;     // imágenes / tarjetas
+$radius-lg: 10px;    // tarjetas (tienda)
+$radius-xl: 14px;    // carrusel
+$radius-pill: 9999px;
+
+$shadow-sm: 0 2px 5px rgba(0,0,0,.1);   // tarjetas
+$shadow-md: 0 2px 8px rgba(0,0,0,.2);   // header
+$shadow-lg: 0 5px 14px rgba(0,0,0,.2);  // carrusel
+
+/* ---- Espaciados ---- */
+$space-0: 0;
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 10px;
+$space-4: 12px;
+$space-5: 15px;
+$space-6: 20px;
+$space-7: 40px;
+
+/* ---- Z-index ---- */
+$z-header: 1000;
+
+/* ---- Breakpoints y mixins ---- */
+$bp-mobile: 430px;
+
+@mixin mobile {
+    @media (max-width: $bp-mobile) {
+    @content;
+    }
+}

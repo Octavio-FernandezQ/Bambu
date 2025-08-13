@@ -1,0 +1,18 @@
+@keyframes whats {
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(10px);
+    }
+    40%{
+        transform: translateX(-10px);
+    }
+    60%{
+        transform: translate(0);
+    }
+}
+
+%vibrar{
+    animation: whats 2s infinite ease-in-out;
+}

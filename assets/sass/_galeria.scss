@@ -1,0 +1,43 @@
+@use "variables" as v;
+
+.pagina-galeria {
+    background-color: v.$color-bg;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+        h2 {
+        font-size: 2.5rem;
+        color: v.$color-heading-2;
+        margin-bottom: 20px;
+        border-bottom: 2px solid v.$color-primary;
+        padding-bottom: 5px;
+    }
+        p {
+        font-size: 1.2rem;
+        color: v.$color-text;
+        margin-bottom: 20px;
+    }
+        section {
+        display: flex;
+        flex-direction: column;
+    }
+        .galeria-imagenes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+        img {
+        width: 25%;
+        height: auto;
+        border-radius: 8px;
+        margin: 10px;
+    }
+}
+@include v.mobile {
+    .pagina-galeria {
+    img { width: 48%; } 
+    }
+}
