@@ -12,7 +12,7 @@
 /* Marca / header / botones */
 /* Títulos */
 /* Neutros */
-/* ---- Radios / sombras del sitio ---- */
+/* ---- Radios / sombras ---- */
 /* ---- Espaciados ---- */
 /* ---- Z-index ---- */
 /* ---- Breakpoints y mixins ---- */
@@ -242,6 +242,117 @@ footer .redes ul li img:hover {
 }
 .pagina-home .contenido-home .texto-home p {
   margin-bottom: 10px;
+}
+.pagina-home .explora {
+  padding: 20px;
+  margin: 20px 0;
+  background: rgb(240.65, 242.6068181818, 209.9931818182);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.pagina-home .explora h2 {
+  font-weight: 700;
+  color: #73946B;
+  margin: 0 0 15px 0;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  border-bottom: 2px solid #73946B;
+}
+.pagina-home .explora .explora-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+.pagina-home .explora .explora-card {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333333;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.pagina-home .explora .explora-card .icono {
+  display: none !important;
+}
+.pagina-home .explora .explora-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+}
+.pagina-home .explora .explora-card:focus-visible {
+  outline: 2px solid #73946B;
+  outline-offset: 2px;
+}
+.pagina-home .explora .explora-card .txt h3 {
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  color: #73946B;
+  font-size: 1.15rem;
+}
+.pagina-home .explora .explora-card .txt p {
+  margin: 0;
+  color: #444444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.pagina-home .explora .explora-card + .explora-card {
+  margin-top: 20px;
+}
+.pagina-home .consejos {
+  padding: 20px;
+  margin: 20px 0;
+}
+.pagina-home .consejos h2 {
+  font-weight: 700;
+  color: #73946B;
+  margin: 0 0 15px 0;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  border-bottom: 2px solid #73946B;
+}
+.pagina-home .consejos .consejos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.pagina-home .consejos .consejo {
+  background: #E9ECBA;
+  border-radius: 8px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  column-gap: 12px;
+  align-items: start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.pagina-home .consejos .consejo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+.pagina-home .consejos .consejo .icono {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 3px;
+}
+.pagina-home .consejos .consejo h3 {
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #73946B;
+}
+.pagina-home .consejos .consejo p {
+  margin: 0;
+  color: #444444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  grid-column: 2/-1;
 }
 @media (max-width: 430px) {
   .pagina-home .contenido-home {

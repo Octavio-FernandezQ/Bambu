@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bambú - Galería</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -36,7 +37,7 @@
     
 
     <main class="pagina-galeria">
-        <section>
+        <section data-aos="fade-up">
             <h2>Interior</h2>
                 <div class="galeria-imagenes">
                 <img src="../img/PandurataARTC.jpeg" alt="Ficus Pandurata" title="Ficus Pandurata"> 
@@ -48,7 +49,7 @@
             </p>
         </section>
         
-        <section>
+        <section data-aos="fade-up">
             <h2>Exterior</h2>
                 <div class="galeria-imagenes">
                 <img src="../img/Gomero.jpeg" alt="Gomero" title="Gomero">
@@ -60,7 +61,7 @@
             </p>
         </section>
 
-        <section>
+        <section data-aos="fade-up">
         <h2>Accesorios</h2>
             <div class="galeria-imagenes">
                 <img src="../img/MacetaCERAMICA.jpeg" alt="Macetas ceramica" title="Macetas ceramica">
@@ -102,5 +103,9 @@
     <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp">
     <img src="../img/whatsapp.png" alt="Logo de Whatsapp">
     </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

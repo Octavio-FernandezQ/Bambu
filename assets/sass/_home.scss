@@ -26,6 +26,115 @@
             }
         }
     }
+    .explora {
+        padding: v.$space-6;
+        margin: v.$space-6 0;
+        background: lighten(v.$color-bg, 6%);
+        border: 1px solid rgba(0,0,0,.07);
+        border-radius: v.$radius-md;
+        box-shadow: 0 4px 12px rgba(0,0,0,.05);
+        h2 {
+            font-weight: 700;
+            color: v.$color-primary;
+            margin: 0 0 v.$space-5 0;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            border-bottom: 2px solid v.$color-primary;
+        }
+        .explora-grid {
+            display: grid;
+            grid-template-columns: 1fr;                    
+            gap: v.$space-2;                               
+        }   
+        .explora-card {
+            display: flex;                                 
+            align-items: start;
+            gap: v.$space-4;
+            background: v.$white;                      
+            border: 1px solid rgba(0,0,0,.06);
+            border-radius: v.$radius-md;
+            padding: v.$space-5;
+            box-shadow: v.$shadow-sm;
+            text-decoration: none;
+            color: v.$color-text;
+            position: relative;
+                .icono { display: none !important; }
+                transition: transform .2s ease, box-shadow .2s ease;
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+                    background: v.$white;
+                }
+            &:focus-visible {
+                outline: 2px solid v.$color-primary;
+                outline-offset: 2px;
+            }
+        .txt {
+            h3 {
+                margin: 0 0 6px 0;
+                font-weight: 600;
+                color: v.$color-primary;
+                font-size: 1.15rem;
+            }
+        p {
+            margin: 0;
+            color: v.$color-text-2;
+            font-size: .95rem;
+            line-height: 1.5;
+            }
+        }
+    }
+        .explora-card + .explora-card { margin-top: v.$space-6; }
+    }
+    .consejos {
+        padding: v.$space-6;
+        margin: v.$space-6 0;
+        h2 {
+            font-weight: 700;
+            color: v.$color-primary;
+            margin: 0 0 v.$space-5 0;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            border-bottom: 2px solid v.$color-primary;
+        }
+        .consejos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: v.$space-6;
+        }
+        .consejo {
+        background: v.$color-bg;        
+        border-radius: v.$radius-md;
+        padding: v.$space-5;
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        column-gap: v.$space-4;
+        align-items: start;
+        transition: transform .2s ease, box-shadow .2s ease;
+            &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,.08);
+        }
+        .icono {
+        font-size: 1.5rem;
+        line-height: 1;
+        margin-top: 3px;
+        }
+    h3 {
+        margin: 0 0 6px 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: v.$color-primary;
+    }
+        p {
+        margin: 0;
+        color: v.$color-text-2;
+        font-size: .95rem;
+        line-height: 1.5;
+        grid-column: 2 / -1;  
+        }
+    }
+}
     @include v.mobile {
         .contenido-home {
         flex-direction: column;
