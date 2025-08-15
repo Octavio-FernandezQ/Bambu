@@ -1,64 +1,69 @@
 @use "variables" as v;
 
 header {
-    background-color: v.$color-primary;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    padding: 10px 40px;
+    background: linear-gradient(180deg, v.$color-primary 0%, lighten(v.$color-primary, 10%) 100%);
+    position: sticky; top: 0; z-index: v.$z-header;
     box-shadow: v.$shadow-md;
-    top: 0;
-    z-index: v.$z-header;
-    .Logo {
-        width: 18vw;
-        height: auto;
-        display: block;
-        margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "slogan logo nav";
+    align-items: center;
+    padding: 10px 40px;
+        a { grid-area: logo; justify-self: center; }
+        .Logo {
+            display: block;
+            max-height: 90px;              
+            height: auto;
+            margin: 0;
     }
     .bloque-central {
+        grid-area: slogan;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         text-align: left;
-        position: absolute;
-        left: 22vw;
-        top: 50%;
-        transform: translateY(-50%);
+        position: static;
+        left: auto; top: auto; transform: none;
         h1 {
-            font-family: v.$fuente;
-            font-size: 1.6rem;
-            color: v.$color-heading;
-            margin: 0;
-            padding-left: 10px;
+        font-family: v.$fuente;
+        font-size: 1rem;  
+        color: v.$white;
+        margin: 0;
+        padding-left: 10px;
+        font-weight: 600;
+        letter-spacing: .2px;
+        opacity: .95;
         }
     }
     nav {
-        margin-bottom: 6px;
+        grid-area: nav;
+        margin: 0;                     
+        justify-self: end;
         ul {
             list-style: none;
             display: flex;
             gap: 15px;
             padding: 0;
             margin: 0;
-    li {
-        a {
-        text-decoration: none;
-        color: v.$white;
-        font-weight: 600;
-        background-color: v.$color-primary-600;
-        padding: 8px 12px;
-        border-radius: v.$radius-sm;
-        transition: background-color 0.3s ease;
-                &:hover {
-                background-color: v.$color-primary-700;
+            li {
+                a {
+                    text-decoration: none;
+                    color: v.$white;
+                    font-weight: 600;
+                    background-color: v.$color-primary-600;
+                    padding: 8px 12px;
+                    border-radius: v.$radius-sm;
+                    transition: background-color .3s ease, transform .15s ease, box-shadow .15s ease;
+                    &:hover {
+                        background-color: v.$color-primary-700;
+                        transform: translateY(-1px);                      
+                        box-shadow: 0 2px 6px rgba(0,0,0,.15);
+                    }
                 }
             }
         }
     }
-}
 
 @include v.mobile {
     display: flex;
@@ -68,8 +73,10 @@ header {
     padding: 10px 15px;
     position: relative;
         .Logo {
-        width: 50vw;
-        margin-bottom: 10px;
+        display: block;
+        max-height: 80px;              
+        height: auto;
+        margin: 0;
         }
         .bloque-central {
         width: 100%;

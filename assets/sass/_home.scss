@@ -21,6 +21,12 @@
             font-size: 16px;
             line-height: 1.6;
             color: v.$color-text-2;
+            background: lighten(v.$color-bg, 6%);
+            border: 1px solid rgba(0,0,0,.07);
+            border-radius: v.$radius-md;
+            box-shadow: 0 4px 12px rgba(0,0,0,.05);
+            padding: v.$space-6;
+            margin: v.$space-6 0;
                 p {
                 margin-bottom: 10px;
             }
