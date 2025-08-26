@@ -12,7 +12,7 @@
 /* Marca / header / botones */
 /* Títulos */
 /* Neutros */
-/* ---- Radios / sombras ---- */
+/* ---- Radios / sombras del sitio ---- */
 /* ---- Espaciados ---- */
 /* ---- Z-index ---- */
 /* ---- Breakpoints y mixins ---- */
@@ -52,7 +52,7 @@ header .bloque-central {
 }
 header .bloque-central h1 {
   font-family: "Montserrat", "Lora";
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #ffffff;
   margin: 0;
   padding-left: 10px;
@@ -262,6 +262,18 @@ footer .redes ul li img:hover {
 }
 .pagina-home .contenido-home .texto-home p {
   margin-bottom: 10px;
+}
+.pagina-home .intro-carrusel {
+  text-align: center;
+  font-family: "Montserrat", "Lora";
+  font-size: 1.8rem;
+  color: #264D34;
+  margin: 5px auto 15px auto;
+  max-width: 800px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, rgb(227, 233.6, 225.4), white);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .pagina-home .explora {
   padding: 20px;

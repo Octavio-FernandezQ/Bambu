@@ -32,6 +32,22 @@
             }
         }
     }
+    .intro-carrusel {
+        text-align: center;
+        font-family: v.$fuente;
+        font-size: 1.8rem;
+        color: v.$color-heading-2;
+        margin: 5px auto 15px auto; 
+        max-width: 800px;
+        padding: 12px 20px;
+        background: linear-gradient(
+            135deg, 
+            lighten(v.$color-primary, 40%),   
+            lighten(v.$color-primary, 60%)   
+        );
+        border-radius: v.$radius-md;
+        box-shadow: v.$shadow-sm;
+    }
     .explora {
         padding: v.$space-6;
         margin: v.$space-6 0;
