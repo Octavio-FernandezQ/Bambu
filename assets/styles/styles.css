@@ -263,6 +263,25 @@ footer .redes ul li img:hover {
 .pagina-home .contenido-home .texto-home p {
   margin-bottom: 10px;
 }
+.pagina-home .imagen-vivero {
+  max-width: 1100px;
+  margin: 10px auto 24px;
+  align-items: center;
+  padding: 12px;
+  background-color: rgb(240.65, 242.6068181818, 209.9931818182);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 12px;
+}
+.pagina-home .imagen-vivero img {
+  width: 100%;
+  height: 340px;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: block;
+}
 .pagina-home .intro-carrusel {
   text-align: center;
   font-family: "Montserrat", "Lora";
@@ -396,6 +415,13 @@ footer .redes ul li img:hover {
   .pagina-home .imagen-home {
     width: 100%;
     max-width: 320px;
+  }
+  .pagina-home .imagen-vivero {
+    width: 100%;
+    max-width: auto;
+    max-height: auto;
+    display: flex;
+    align-items: center;
   }
   .pagina-home .texto-home {
     font-size: 0.95rem;
@@ -568,7 +594,7 @@ footer .redes ul li img:hover {
   background-color: #E9ECBA;
 }
 .pagina-sobrenosotros h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #264D34;
   margin-bottom: 20px;
   border-bottom: 2px solid #73946B;
@@ -576,10 +602,10 @@ footer .redes ul li img:hover {
   text-align: center;
 }
 .pagina-sobrenosotros .sobre-qa {
-  max-width: 920px;
+  max-width: 1080px;
   width: 100%;
   display: grid;
-  gap: 20px;
+  gap: 40px;
 }
 .pagina-sobrenosotros .qa {
   display: grid;
@@ -590,7 +616,7 @@ footer .redes ul li img:hover {
 .pagina-sobrenosotros .q {
   font-weight: 700;
   color: #73946B;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.3;
   margin: 0;
   padding: 12px;
@@ -600,25 +626,46 @@ footer .redes ul li img:hover {
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  padding: 15px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.pagina-sobrenosotros .a img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 .pagina-sobrenosotros .a p {
   margin: 0;
   color: #264D34;
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  line-height: 1.9;
   text-align: justify;
 }
 
 @media (max-width: 430px) {
   .pagina-sobrenosotros {
+    overflow-x: hidden;
+  }
+  .pagina-sobrenosotros .a {
+    grid-template-columns: 1fr;
+    gap: 12px;
     padding: 16px;
   }
-  .pagina-sobrenosotros h2 {
+  .pagina-sobrenosotros .a img {
+    height: auto;
+    margin-bottom: 12px;
+  }
+  .pagina-sobrenosotros .a h2 {
     font-size: 1.6rem;
     text-align: left;
   }
-  .pagina-sobrenosotros p {
+  .pagina-sobrenosotros .a p {
     max-width: 100%;
     font-size: 0.95rem;
     padding: 16px;
